@@ -7,7 +7,10 @@ import {
   DialogTitle,
   DialogContent,
   Container,
+  IconButton,
 } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close'; // Importa el ícono de cierre
+
 
 
 export const Timeoff = () => {
@@ -23,10 +26,19 @@ export const Timeoff = () => {
   return (
     <div>
       <Calendar/>
-      <Button variant="contained"style={{backgroundColor:"red"}} onClick={handleOpen}>
+      <Button variant="contained" style={{backgroundColor:"red"}} onClick={handleOpen}>
         Agendar Time Off
       </Button>
       <Dialog open={open} onClose={handleClose}>
+      <DialogTitle>
+          <IconButton
+            color="inherit"
+            onClick={handleClose}
+            aria-label="close"
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
         <DialogContent>
           <Container maxWidth="lg">
             <TimeOffForm />

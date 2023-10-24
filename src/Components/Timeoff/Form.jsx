@@ -45,7 +45,7 @@ function TimeOffForm() {
         padding: '20px',
         color: theme.palette.txtPrincipal.main,
       }}>
-      <Typography variant="h1" align="center" style={{fontSize:"30px", marginBottom:"20px"}}>¡ Solicita tu Time Off !</Typography>
+      <Typography variant="h1" align="center" style={{fontSize:"30px", marginBottom:"35px"}}>¡ Solicita tu Time Off !</Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
