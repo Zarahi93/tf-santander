@@ -42,8 +42,6 @@ function TimeOffForm() {
     <Container maxWidth="lg"
       style={{
         backgroundColor: 'white',
-        borderRadius: '20px',
-        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
         padding: '20px',
         color: theme.palette.txtPrincipal.main,
       }}>
