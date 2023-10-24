@@ -1,6 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+
 import { createTheme, ThemeProvider, getContrastRatio } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from './Components/Login';
+import Home from './Components/Home';
+import Timeoff from './Components/Timeoff/Timeoff';
+import './App.css';
 
 const redSantanderBase = '#ec0000';
 const bgColorBase = '#f2f2f2';
@@ -41,25 +45,21 @@ const santanderTheme = createTheme({
       },
     },
   });
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './Components/Login';
-import Home from './Components/Home';
 
-function App() {
-  return (
-// <ThemeProvider theme={santanderTheme}> 
-// VA DENTRO DE LA FUNCIÓN Y ENCAPSULA TODOS LOS ELEMENTOS
-    <div className="App">
-      <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-      
-      </Routes>
-    </BrowserRouter>
-    </div>
-  );
-  // <ThemeProvider />
-}
+  function App() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <ThemeProvider theme={santanderTheme}>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/timeoff" element={<Timeoff />} />
+            </Routes>
+          </ThemeProvider>
+        </BrowserRouter>
+      </div>
+    );
+  }
 
 export default App;
