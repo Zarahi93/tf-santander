@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { createTheme, ThemeProvider, getContrastRatio } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -38,9 +39,18 @@ const santanderTheme = createTheme({
       fontSize: 28,
       fontFamily: "Santander Text W05 Regular"
     },
+    h3: {
+      fontSize: 20,
+      fontFamily: "Santander Text W05 Regular"
+    },
+    body1: {
+      fontSize: 15,
+      fontFamily: "Santander Text W05 Regular"
+    },
     button: {
       fontFamily: "Santander Headline W05 Bold",
       textTransform: 'none',
+      border: "1px solid red",
     },
   },
 });
@@ -49,12 +59,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/timeoff" element={<Timeoff />} />
-      </Routes>
-    </BrowserRouter>
+        <ThemeProvider theme={santanderTheme}>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/timeoff" element={<Timeoff />} />
+          </Routes>
+        </ThemeProvider>
+      </BrowserRouter>
     </div>
   );
 }
