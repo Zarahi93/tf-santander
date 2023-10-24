@@ -41,7 +41,7 @@ export const Timeoff = () => {
         </DialogTitle>
         <DialogContent>
           <Container maxWidth="lg">
-            <TimeOffForm />
+            <TimeOffForm onCancel={handleClose}/>
           </Container>
         </DialogContent>
       </Dialog>

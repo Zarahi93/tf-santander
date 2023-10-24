@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Typography, TextField, MenuItem, Button, Grid } from '@mui/material';
 import { useTheme } from '@mui/system';
 
-function TimeOffForm() {
+function TimeOffForm({ onCancel }) {
   const theme = useTheme();
 
   const [reason, setReason] = useState('');
@@ -27,7 +27,8 @@ function TimeOffForm() {
   };
 
   const handleCancel = () => {
-    console.log('Cancel')
+    console.log('Cancel');
+    onCancel();
   };
 
   const handleSubmit = () => {
