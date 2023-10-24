@@ -1,7 +1,11 @@
 import Calendar from "./Calendar"
+import TimeOffForm from "./Form"
 
 export const Timeoff = () => {
   return (
-    <Calendar/>
+    <div>
+      <Calendar/>
+      <TimeOffForm/>
+    </div>
   )
 }
