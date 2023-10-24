@@ -9,6 +9,7 @@ function TimeOffForm({ onCancel }) {
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [description, setDescription] = useState('');
+  const [showWarning, setShowWarning] = useState(false);
 
   const handleReasonChange = (event) => {
     setReason(event.target.value);
@@ -32,11 +33,16 @@ function TimeOffForm({ onCancel }) {
   };
 
   const handleSubmit = () => {
-    console.log('Motivo:', reason);
-    console.log('Desde:', fromDate);
-    console.log('Hasta:', toDate);
-    console.log('Descripción:', description);
-    // Agregar lógica para envío de form
+    if (reason && fromDate && toDate && description) {
+      console.log('Motivo:', reason);
+      console.log('Desde:', fromDate);
+      console.log('Hasta:', toDate);
+      console.log('Descripción:', description);
+      // Agregar lógica para envío de form
+      onCancel();
+    } else {
+      setShowWarning(true);
+    }
   };
 
   return (
@@ -46,7 +52,12 @@ function TimeOffForm({ onCancel }) {
         padding: '20px',
         color: theme.palette.txtPrincipal.main,
       }}>
-      <Typography variant="h1" align="center" style={{fontSize:"30px", marginBottom:"35px"}}>¡ Solicita tu Time Off !</Typography>
+      <Typography variant="h1" align="center" style={{fontSize:"30px", marginBottom:"30px"}}>¡ Solicita tu Time Off !</Typography>
+      {showWarning && (
+        <Typography variant="body1" align="center" color="error" style={{fontSize:"18px", marginBottom:"25px"}}>
+          Completa todos los campos requeridos.
+        </Typography>
+      )}
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
