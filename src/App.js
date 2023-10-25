@@ -33,6 +33,7 @@ const santanderTheme = createTheme({
       fontFamily: "Santander Headline W05 Bold"
     },
     h1: {
+      fontSize: 32,
       fontFamily: "Santander Headline W05 Bold"
     },
     h2: {
@@ -41,6 +42,22 @@ const santanderTheme = createTheme({
     },
     h3: {
       fontSize: 20,
+      fontFamily: "Santander Text W05 Regular"
+    },
+    h4: {
+      fontSize: 20,
+      fontFamily: "Santander Headline W05 Bold"
+    },
+    p2: {
+      fontSize: 14,
+      fontFamily: "Santander Text W05 Regular"
+    },
+    p3: {
+      fontSize: 12,
+      fontFamily: "Santander Text W05 Regular"
+    },
+    p4: {
+      fontSize: 16,
       fontFamily: "Santander Text W05 Regular"
     },
     body1: {

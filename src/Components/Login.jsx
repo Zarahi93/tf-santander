@@ -1,28 +1,29 @@
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import { useNavigate } from "react-router-dom";
-
 import CssBaseline from '@mui/material/CssBaseline';
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Grid } from '@mui/material';
+import { handleLogin } from "../Services/authService";
+
 
 
 function Repository() {
     return (
         <>
-            <Typography variant="body2" color="text.secondary" align="center" >
+            <Typography variant="body2" color="text.secondary">
             {'TalentFest Latam 2023 - Squad Santander '}
             </Typography>
-            <Link variant="body2" color="text.secondary" align="center" href="https://github.com/Zarahi93/tf-santander">
+            <Link variant="body2" color="text.secondary" href="https://github.com/Zarahi93/tf-santander">
             Consulta el Repositorio
             </Link>
         </>   
     );
 }
-
-function Login() {
+// console.log(handleLogin('alejandro_lo@santander.com.mx','alejandro123'))
+export default function Login() {
     const navigate = useNavigate();
 
     // const handleClick = () => {
@@ -38,6 +39,7 @@ function Login() {
         });
         if ( handleSubmit ) {
             navigate("/home");
+            
         } else {
            console.log('Datos incorrectos');
         }
@@ -55,7 +57,7 @@ function Login() {
 
 
             <Grid container component="main" sx={{ height: '100vh' }}>
-            <CssBaseline />
+            {/* <CssBaseline /> */}
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <Box
                 sx={{
@@ -66,15 +68,13 @@ function Login() {
                     alignItems: 'center',
                 }}
                 >
-
-                    {/* <img className='image-login' src={require("../assets/logo-login.png")} alt="logo"/> */}
-                    <Typography component="h1" variant="h0"sx={{ mt: 10 }}>
+                    <img src="../../logo-login.png" alt="logo" style={{ width: '80%' }}/>
+                    <Typography component="h1" variant="h0" sx={{ mt: 10 }}>
                         ¡Hola de nuevo!
                     </Typography>
                     <Typography component="h2" variant="h2">
                         Entra ahora
                     </Typography>
-
                     <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }} fontFamily={"Santander Text W05 Regular"}>
                         <TextField
                             margin="normal"
@@ -129,5 +129,3 @@ function Login() {
         </>
     );
 }
-
-export default Login;
