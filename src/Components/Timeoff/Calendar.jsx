@@ -7,6 +7,16 @@ import {
 import moment from "moment";
 import YearView from "./YearView";
 import { useState } from "react";
+
+import 'moment/locale/es';
+moment.locale("es");
+// moment.updateLocale("es", {
+// 	week: {
+// 		dow: 1,
+// 		doy: 4,
+// 	},
+// });
+
 const localizer = momentLocalizer(moment);
 // const nationalFestivities = [
 //   // feriados que NO se
@@ -54,7 +64,13 @@ export default function Calendar({theme}) {
       onView={handleViewChange}
       onNavigate={(newDate) => setDate(newDate)}
       views={views}
-      messages={{ year: "Year" }}
+      messages={{
+        next: ">>",
+        previous: "<<",
+        today: "Hoy",
+        month: "Mes",
+        year: "Año",
+        week: "Semana"}}
       theme = {theme}
     />
   );
