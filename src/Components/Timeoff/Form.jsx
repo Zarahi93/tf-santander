@@ -112,24 +112,24 @@ function TimeOffForm({ onCancel }) {
         padding: '0px 20px 20px 20px',
         color: theme.palette.txtPrincipal.main,
       }}>
-      <Typography variant="h1" align="center" style={{ fontSize: "30px", marginBottom: "30px" }}>¡ Solicita tu Time Off !</Typography>
+      <Typography variant="h1" align="center" style={{ fontSize: "3.5vh", marginBottom: "30px" }}>¡ Solicita tu Time Off !</Typography>
       {showWarning && (
-        <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
+        <Typography variant="body1" align="center" color="error" style={{ fontSize: "2.2vh", marginBottom: "25px" }}>
           Completa todos los campos requeridos.
         </Typography>
       )}
       {showWarning2 && (
-        <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
+        <Typography variant="body1" align="center" color="error" style={{ fontSize: "2.2vh", marginBottom: "25px" }}>
           Selecciona una fecha posterior al día de hoy.
         </Typography>
       )}
       {showWarning3 && (
-        <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
+        <Typography variant="body1" align="center" color="error" style={{ fontSize: "2.2vh", marginBottom: "25px" }}>
           Selecciona una fecha posterior al día de inicio.
         </Typography>
       )}
       {showWarning4 && (
-        <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
+        <Typography variant="body1" align="center" color="error" style={{ fontSize: "2.2vh", marginBottom: "25px" }}>
           Selecciona una fecha anterior al día de finalización.
         </Typography>
       )}
