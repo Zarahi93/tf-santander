@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+
+import { createTheme, ThemeProvider, getContrastRatio } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './Components/Login';
 import Home from './Components/Home';
-import { createTheme, ThemeProvider, getContrastRatio } from '@mui/material/styles';
 import { Timeoff } from "./Components/Timeoff/Timeoff";
 
 const redSantanderBase = '#ec0000';
@@ -37,9 +39,18 @@ const santanderTheme = createTheme({
       fontSize: 28,
       fontFamily: "Santander Text W05 Regular"
     },
+    h3: {
+      fontSize: 20,
+      fontFamily: "Santander Text W05 Regular"
+    },
+    body1: {
+      fontSize: 15,
+      fontFamily: "Santander Text W05 Regular"
+    },
     button: {
       fontFamily: "Santander Headline W05 Bold",
       textTransform: 'none',
+      border: "1px solid red",
     },
   },
 });
