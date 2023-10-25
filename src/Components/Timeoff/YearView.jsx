@@ -11,18 +11,11 @@ export default function YearView({
   onView,
   onNavigate,
 }) {
+  const currRange = YearView.range(date, { localizer });
+  const dateString = currRange[0]
+  const dateObject = new Date(dateString);
+  const year = dateObject.getFullYear();
 
-    // console.log(nationalFestivities);
-    const currRange = YearView.range(date, { localizer });
-    console.log(currRange[0]);
-  
-    const dateString = currRange[0]
-    const dateObject = new Date(dateString);
-  
-    const year = dateObject.getFullYear();
-  
-    console.log(year);
-    
   const nationalFestivities = [
     // feriados que NO se trabaja
     //resalte las vacaciones
@@ -51,24 +44,24 @@ export default function YearView({
       end: moment(`${year}-05-01`).toDate(),
     },
     {
-      start: moment(` ${year}-09-16` ).toDate(),
-      end: moment(` ${year}-09-16` ).toDate(),
+      start: moment(` ${year}-09-16`).toDate(),
+      end: moment(` ${year}-09-16`).toDate(),
     },
     {
-      start: moment(` ${year}-11-02` ).toDate(),
-      end: moment(` ${year}-11-02` ).toDate(),
+      start: moment(` ${year}-11-02`).toDate(),
+      end: moment(` ${year}-11-02`).toDate(),
     },
     {
-      start: moment(` ${year}-11-20` ).toDate(),
-      end: moment(` ${year}-11-20` ).toDate(),
+      start: moment(` ${year}-11-20`).toDate(),
+      end: moment(` ${year}-11-20`).toDate(),
     },
     {
-      start: moment(` ${year}-12-12` ).toDate(),
-      end: moment(` ${year}-12-12` ).toDate(),
+      start: moment(` ${year}-12-12`).toDate(),
+      end: moment(` ${year}-12-12`).toDate(),
     },
     {
-      start: moment(` ${year}-12-25` ).toDate(),
-      end: moment(` ${year}-12-25` ).toDate(),
+      start: moment(` ${year}-12-25`).toDate(),
+      end: moment(` ${year}-12-25`).toDate(),
     },
   ];
 
@@ -90,6 +83,8 @@ export default function YearView({
                   return "red";
                 return null;
               }}
+              // formatShortWeekday={(locale, date) => formatDate(date, 'dd')}
+              defaultView="month"
             />
           </div>
         );
