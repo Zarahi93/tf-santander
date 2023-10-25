@@ -3,7 +3,7 @@
 import { Navigate } from "react-big-calendar";
 import Calendar from "react-calendar";
 import moment from "moment";
-import './events.css'
+import './calendar.css'
 
 export default function YearView({
   date,

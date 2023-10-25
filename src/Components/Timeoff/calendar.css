@@ -1,0 +1,73 @@
+@import url(https://db.onlinewebfonts.com/c/058d42bfae0ddfbe480af070188ce3e8?family=Santander+Headline+W05+Bold);
+
+* {
+  font-family: "Santander Headline W05 Bold";
+}
+
+.rbc-calendar {
+  display: flex;
+  flex-direction: column;
+  width: 505px;
+  height: 810px;
+  overflow-x: scroll;
+}
+
+.rbc-calendar .rbc-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rbc-calendar button {
+  border: none;
+}
+
+.rbc-calendar button:hover {
+  background: #c7c7c7;
+}
+
+.rbc-toolbar {
+  font-size: 1.5rem;
+}
+
+.rbc-toolbar button{
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.rbc-header{
+  font-size: 1.3rem;
+}
+
+.rbc-row {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.rbc-row button {
+  border: none;
+}
+
+.rbc-month-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rbc-button-link {
+  font-size: 1rem;
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: .9rem;
+}
+
+.rbc-date-cell {
+  width: .8rem;
+  background-color: white !important;
+}
+
+
+.red {
+  background-color: red;
+}
