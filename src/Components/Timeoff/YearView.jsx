@@ -3,16 +3,75 @@
 import { Navigate } from "react-big-calendar";
 import Calendar from "react-calendar";
 import moment from "moment";
+import './events.css'
 
 export default function YearView({
   date,
   localizer,
   onView,
   onNavigate,
-  events,
 }) {
 
-  const currRange = YearView.range(date, { localizer });
+    // console.log(nationalFestivities);
+    const currRange = YearView.range(date, { localizer });
+    console.log(currRange[0]);
+  
+    const dateString = currRange[0]
+    const dateObject = new Date(dateString);
+  
+    const year = dateObject.getFullYear();
+  
+    console.log(year);
+    
+  const nationalFestivities = [
+    // feriados que NO se trabaja
+    //resalte las vacaciones
+    {
+      start: moment(`${year}-01-01`).toDate(),
+      end: moment(`${year}-01-01`).toDate(),
+    },
+    {
+      start: moment(`${year}-02-06`).toDate(),
+      end: moment(`${year}-02-06`).toDate(),
+    },
+    {
+      start: moment(`${year}-03-21`).toDate(),
+      end: moment(`${year}-03-21`).toDate(),
+    },
+    {
+      start: moment(`${year}-04-06`).toDate(),
+      end: moment(`${year}-04-06`).toDate(),
+    },
+    {
+      start: moment(`${year}-04-07`).toDate(),
+      end: moment(`${year}-04-07`).toDate(),
+    },
+    {
+      start: moment(`${year}-05-01`).toDate(),
+      end: moment(`${year}-05-01`).toDate(),
+    },
+    {
+      start: moment(` ${year}-09-16` ).toDate(),
+      end: moment(` ${year}-09-16` ).toDate(),
+    },
+    {
+      start: moment(` ${year}-11-02` ).toDate(),
+      end: moment(` ${year}-11-02` ).toDate(),
+    },
+    {
+      start: moment(` ${year}-11-20` ).toDate(),
+      end: moment(` ${year}-11-20` ).toDate(),
+    },
+    {
+      start: moment(` ${year}-12-12` ).toDate(),
+      end: moment(` ${year}-12-12` ).toDate(),
+    },
+    {
+      start: moment(` ${year}-12-25` ).toDate(),
+      end: moment(` ${year}-12-25` ).toDate(),
+    },
+  ];
+
 
   return (
     <div >
@@ -24,9 +83,8 @@ export default function YearView({
               tileClassName={({ date, view }) => {
                 if (
                   view === "month" &&
-                  events?.find((event) =>
+                  nationalFestivities?.find((event) =>
                     moment(event.start).isSame(moment(date), "day")
-                    // console.log(event)
                   )
                 )
                   return "red";
@@ -42,10 +100,10 @@ export default function YearView({
 
 YearView.range = (date) => {
   const range = [];
-  let current = new Date(date.getFullYear(), 0, 1); // Start from January
+  let current = new Date(date.getFullYear(), 0, 1);
   for (let i = 0; i < 12; i++) {
     range.push(current);
-    current = new Date(current.getFullYear(), current.getMonth() + 1, 1); // Move to the next month
+    current = new Date(current.getFullYear(), current.getMonth() + 1, 1);
   }
   return range;
 };
@@ -58,8 +116,10 @@ YearView.navigate = (
   if (action instanceof Date) return action;
   switch (action) {
     case Navigate.NEXT:
+      console.log(localizer.add(date));
       return localizer.add(date, 1, "year");
     case Navigate.PREVIOUS:
+      console.log(localizer.add(date));
       return localizer.add(date, -1, "year");
     default:
       return date;
