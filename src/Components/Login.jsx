@@ -12,14 +12,14 @@ import { handleLogin } from "../Services/authService";
 
 function Repository() {
     return (
-        <>
-            <Typography variant="body2" color="text.secondary">
+        <Box variant="body2" color="text.secondary" sx={{textAlign: "center"}}>
+            <Typography >
             {'TalentFest Latam 2023 - Squad Santander '}
             </Typography>
             <Link variant="body2" color="text.secondary" href="https://github.com/Zarahi93/tf-santander">
             Consulta el Repositorio
             </Link>
-        </>   
+        </Box>   
     );
 }
 // console.log(handleLogin('alejandro_lo@santander.com.mx','alejandro123'))

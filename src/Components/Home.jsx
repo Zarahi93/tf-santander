@@ -10,12 +10,8 @@ const firstLetter = date.charAt(0);
 const rest = date.slice(1);
 const dateToday = firstLetter.toUpperCase() + rest;
   
-// console.log(dateToday)
-
 const name = getPersonalInfo().full_name.split(' ')[0];
 const stack = getLaborData().job_title;
-// console.log(getPersonalInfo)
-console.log()
 
 export default function Home() {
     const navigate = useNavigate();
@@ -29,12 +25,7 @@ export default function Home() {
     }
 
     return (
-        <Box sx={{ 
-            maxWidth: '90%', 
-            m: 'auto'
-            // pl: '20%', pr: '10%' 
-            // ml: {md={'10%'}}, mr: '10%'
-        }}>
+        <Box sx={{ maxWidth: '90%', m: 'auto' }}>
             
             <Stack spacing={2} direction="row">
                 <Button variant="contained" onClick={goLogin}>Login</Button>
@@ -64,5 +55,3 @@ export default function Home() {
         </Box>
     );
 }
-
-// export default Home;

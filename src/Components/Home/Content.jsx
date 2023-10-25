@@ -1,7 +1,5 @@
-// import TableHead from '@mui/material/TableHead';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Paper, Typography,tableCellClasses } from '@mui/material';
 import { getPersonalInfo, getLaborData } from '../../Services/authService';
-// import { getPersonalInfo, getLaborData } from "../Services/authService";
 
 
 
@@ -24,7 +22,6 @@ function createData(topic, data) {
 export default function Content () {
     return (
         <TableContainer sx={{
-            // maxWidth: 456, 
             borderRadius: '10px',
             boxShadow: 4, mb: 3 }} component={Paper} >
 
@@ -60,4 +57,3 @@ export default function Content () {
         </TableContainer>
     )
 }
-

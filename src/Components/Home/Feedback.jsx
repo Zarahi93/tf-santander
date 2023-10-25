@@ -13,11 +13,7 @@ function createData(name, feedback) {
 
 export default function Feedback() {
   return (
-    <Box sx={{ 
-      // maxWidth: 546, 
-      borderRadius: '10px',boxShadow: 4 }} 
-    // elevation={6}
-    >
+    <Box sx={{ borderRadius: '10px',boxShadow: 4 }}>
         <List sx={{ width: '100%' }} >
                     <Typography variant="h4" color="txtPrincipal" align="left" sx={{ pl: 2, pt: 2, pb: 1 }}>Feedback</Typography> 
         {rows.map((row) => (
