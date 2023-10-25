@@ -112,7 +112,7 @@
 
 @media screen and (min-width: 360px) and (orientation: portrait) {
   .rbc-calendar {
-    width: 90vw;
+    width: 100%;
   }
   .rbc-toolbar {
     width: 100%;
