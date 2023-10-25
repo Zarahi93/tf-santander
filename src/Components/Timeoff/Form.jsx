@@ -109,7 +109,7 @@ function TimeOffForm({ onCancel }) {
     <Container maxWidth="lg"
       style={{
         backgroundColor: 'white',
-        padding: '20px',
+        padding: '0px 20px 20px 20px',
         color: theme.palette.txtPrincipal.main,
       }}>
       <Typography variant="h1" align="center" style={{ fontSize: "30px", marginBottom: "30px" }}>¡ Solicita tu Time Off !</Typography>

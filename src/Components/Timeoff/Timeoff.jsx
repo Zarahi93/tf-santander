@@ -112,7 +112,7 @@ export const Timeoff = () => {
           </DialogContent>
         </Dialog>
         <Dialog open={openForm} onClose={handleCloseForm}>
-          <DialogTitle>
+          <DialogTitle style={{ margin: "10px 0px 0px 10px", padding:"0px" }}>
             <IconButton
               color="inherit"
               onClick={handleCloseForm}
@@ -121,8 +121,8 @@ export const Timeoff = () => {
               <CloseIcon />
             </IconButton>
           </DialogTitle>
-          <DialogContent>
-            <Container maxWidth="lg">
+          <DialogContent  style={{ margin: "0px", padding:"0px" }}>
+            <Container maxWidth="lg" style={{ margin: "0px", padding:"0px" }}>
               <TimeOffForm onCancel={handleCloseForm} />
             </Container>
           </DialogContent>
