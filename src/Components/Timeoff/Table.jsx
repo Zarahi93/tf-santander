@@ -4,28 +4,28 @@ import { Container, Typography, Divider, Grid } from '@mui/material';
 function VacationInfoTable() {
     return (
         <Container>
-            <Typography variant="h1" align="center" style={{ fontSize: "40px" }}>23</Typography>
-            <Typography variant="h2" align="center" style={{ fontSize: "20px", marginBottom: "30px" }}>Días Disponibles</Typography>
+            <Typography variant="h1" align="center" style={{ fontSize: "6vh" }}>23</Typography>
+            <Typography variant="h2" align="center" style={{ fontSize: "3.5vh", marginBottom: "30px" }}>Días Disponibles</Typography>
             <Divider style={{ margin: '20px 0' }} />
 
             <Grid container spacing={2}>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Saldo de arrastre de vacaciones:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Saldo de arrastre de vacaciones:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>8</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>8</Typography>
                 </Grid>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Días de vacaciones del año actual:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Días de vacaciones del año actual:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>15</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>15</Typography>
                 </Grid>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Saldo total de vacaciones:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Saldo total de vacaciones:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>23</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>23</Typography>
                 </Grid>
             </Grid>
 
@@ -33,16 +33,16 @@ function VacationInfoTable() {
 
             <Grid container spacing={2}>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Ausencias utilizadas:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Ausencias utilizadas:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>1</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>1</Typography>
                 </Grid>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Saldo de ausencias disponibles:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Saldo de ausencias disponibles:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>1</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>1</Typography>
                 </Grid>
             </Grid>
 
@@ -50,10 +50,10 @@ function VacationInfoTable() {
 
             <Grid container spacing={2}>
                 <Grid item xs={8}>
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>Días de permisos especiales utilizados:</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>Días de permisos especiales utilizados:</Typography>
                 </Grid>
                 <Grid item xs={4} align="center">
-                    <Typography variant="body1" style={{ fontSize: "15px" }}>3</Typography>
+                    <Typography variant="body1" style={{ fontSize: "2.3vh" }}>3</Typography>
                 </Grid>
             </Grid>
         </Container>
