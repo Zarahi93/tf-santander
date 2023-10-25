@@ -13,6 +13,7 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import logo from "../Assets/Imgs/logo.png"
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [menuAnchorEl, setMenuAnchorEl] = useState(null);
@@ -50,20 +51,20 @@ function Header() {
           onClose={closeMenu}
         >
           <MenuItem onClick={closeMenu}>
-            <HomeIcon sx={{ marginRight: 1, color:"red" }} />
-            Home
+            <HomeIcon sx={{ marginRight: 1, color: "red" }} />
+            <Link to="/home" style={{ color:"black", textDecoration:"none" }}>Home</Link>
           </MenuItem>
           <MenuItem onClick={closeMenu}>
-            <AirplanemodeActiveIcon sx={{ marginRight: 1, color:"red" }} />
-            Time Off
+            <AirplanemodeActiveIcon sx={{ marginRight: 1, color: "red" }} />
+            <Link to="/timeoff" style={{ color:"black", textDecoration:"none" }}>Time Off</Link>
           </MenuItem>
           <MenuItem onClick={closeMenu}>
-            <HelpOutlineIcon sx={{ marginRight: 1, color:"red" }} />
-            Ayuda
+            <HelpOutlineIcon sx={{ marginRight: 1, color: "red" }} />
+            <Link to="/help" style={{ color:"black", textDecoration:"none" }}>Ayuda</Link>
           </MenuItem>
           <MenuItem onClick={closeMenu}>
-            <LogoutOutlinedIcon sx={{ marginRight: 1, color:"red" }} />
-            Cerrar Sesión
+            <LogoutOutlinedIcon sx={{ marginRight: 1, color: "red" }} />
+            <Link to="/" style={{ color:"black", textDecoration:"none" }}>Cerrar Sesión</Link>
           </MenuItem>
         </Menu>
       </Toolbar>

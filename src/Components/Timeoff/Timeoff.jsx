@@ -16,6 +16,7 @@ import VacationInfoTable from "./Table"
 import Calendar from "./Calendar"
 import TimeOffForm from "./Form"
 import Header from "../Header"
+import Footer from "../Footer"
 import vacationsTable from '../../Assets/Imgs/vacationsTable.png'
 
 
@@ -52,9 +53,9 @@ export const Timeoff = () => {
 
   return (
     <div
-    style={{
-      height: '100vh',
-    }}
+      style={{
+        height: '100vh',
+      }}
     >
       <Header />
       <div
@@ -62,7 +63,7 @@ export const Timeoff = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          margin: "20px"
+          margin: "20px",
         }}
       >
         <Container maxWidth="lg"
@@ -72,7 +73,7 @@ export const Timeoff = () => {
             color: theme.palette.txtPrincipal.main,
             borderRadius: '20px',
             boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
-            margin: "20px",
+            margin: "20px 20px 60px 20px",
           }}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -145,6 +146,7 @@ export const Timeoff = () => {
           </Grid>
         </Container>
       </div>
+      <Footer />
     </div>
   )
 }
