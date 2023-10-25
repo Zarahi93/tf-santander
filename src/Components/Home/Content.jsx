@@ -39,15 +39,10 @@ export default function Content () {
                         [`& .${tableCellClasses.root}`]: {
                           borderBottom: "none",
                           fontFamily: "Santander Text W05 Regular",
-                          fontSize: 16,
+                          fontSize: 16, 
+                          paddingRight: 0
                         }
                       }} aria-label="simple table">
-                {/* <TableHead>
-                <TableRow>
-                    <TableCell>Datos Personales</TableCell>
-                    <TableCell align="right">data</TableCell>
-                </TableRow>
-                </TableHead> */}
                 <TableBody  >
                 {rows.map((row) => (
                     <TableRow
