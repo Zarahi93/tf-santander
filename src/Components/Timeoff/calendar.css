@@ -1,4 +1,6 @@
 @import url(https://db.onlinewebfonts.com/c/058d42bfae0ddfbe480af070188ce3e8?family=Santander+Headline+W05+Bold);
+@import url(https://db.onlinewebfonts.com/c/57c31cff71eb245ff1877009057369f8?family=Santander+Text+W05+Regular);
+
 
 * {
   font-family: "Santander Headline W05 Bold";
@@ -27,6 +29,7 @@
 
 .rbc-toolbar {
   font-size: 1.5rem;
+  align-items: center;
 }
 
 .rbc-toolbar button{
@@ -49,6 +52,10 @@
   border: none;
 }
 
+.rbc-month-view {
+  margin-top: 0.5rem;
+}
+
 .rbc-month-header {
   display: flex;
   justify-content: space-around;
@@ -56,18 +63,83 @@
 
 .rbc-button-link {
   font-size: 1rem;
+  font-family: "Santander Text W05 Regular";
+
 }
 
+.react-calendar {
+  margin: 1rem 0;
+}
 .react-calendar__month-view__weekdays {
   font-size: .9rem;
 }
 
-.rbc-date-cell {
-  width: .8rem;
-  background-color: white !important;
+.react-calendar__navigation {
+  display: flex;
 }
 
+.react-calendar__navigation__arrow {
+  display: none;
+}
+
+.react-calendar__navigation__label {
+  background-color: white;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  flex:1;
+  display: flex;
+  justify-content: center;
+}
+
+.react-calendar__tile {
+  flex: 0;
+}
+
+.react-calendar__tile abbr {
+  font-family: "Santander Text W05 Regular";
+}
+
+.react-calendar__month-view__weekdays__weekday abbr{
+  text-decoration: none;
+  text-align: center;
+}
 
 .red {
-  background-color: red;
+  background-color: red !important;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 360px) and (orientation: portrait) {
+  .rbc-calendar {
+    width: 90vw;
+  }
+  .rbc-toolbar {
+    width: 100%;
+  }
+
+  .rbc-toolbar button {
+    font-size: .8rem;
+    width: 2.2rem;
+    height: 2rem;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  .rbc-toolbar-label {
+    font-size: 1rem;
+  }
+
+  .rbc-header {
+    font-size: .8rem;
+  }
+
+  .rbc-button-link {
+    font-size: .8rem;
+    background-color: white;
+  }
+
+  .react-calendar__tile {
+    background-color: white;
+  }
 }
