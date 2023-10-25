@@ -8,6 +8,10 @@ import {
   MenuItem,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import logo from "../Assets/Imgs/logo.png"
 
 function Header() {
@@ -22,15 +26,14 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor:"white", padding:"15px" }}>
+    <AppBar position="static" style={{ backgroundColor: "white", padding: "15px" }}>
       <Toolbar>
         <img
           src={logo}
           alt="Logo de la empresa"
-          style={{ maxWidth: '25vh' }} // Establece el ancho máximo del logo
+          style={{ maxWidth: '25vh' }}
         />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          {/* Título o texto opcional del encabezado */}
         </Typography>
         <IconButton
           color="inherit"
@@ -46,9 +49,22 @@ function Header() {
           open={Boolean(menuAnchorEl)}
           onClose={closeMenu}
         >
-          <MenuItem onClick={closeMenu}>Home</MenuItem>
-          <MenuItem onClick={closeMenu}>Time Off</MenuItem>
-          <MenuItem onClick={closeMenu}>Ayuda</MenuItem>
+          <MenuItem onClick={closeMenu}>
+            <HomeIcon sx={{ marginRight: 1, color:"red" }} />
+            Home
+          </MenuItem>
+          <MenuItem onClick={closeMenu}>
+            <AirplanemodeActiveIcon sx={{ marginRight: 1, color:"red" }} />
+            Time Off
+          </MenuItem>
+          <MenuItem onClick={closeMenu}>
+            <HelpOutlineIcon sx={{ marginRight: 1, color:"red" }} />
+            Ayuda
+          </MenuItem>
+          <MenuItem onClick={closeMenu}>
+            <LogoutOutlinedIcon sx={{ marginRight: 1, color:"red" }} />
+            Cerrar Sesión
+          </MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>
