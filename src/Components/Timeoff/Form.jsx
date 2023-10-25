@@ -14,6 +14,7 @@ function TimeOffForm({ onCancel }) {
   const [showWarning, setShowWarning] = useState(false);
   const [showWarning2, setShowWarning2] = useState(false);
   const [showWarning3, setShowWarning3] = useState(false);
+  const [showWarning4, setShowWarning4] = useState(false);
   const [isImageModalOpen, setImageModalOpen] = useState(false);
 
   const handleReasonChange = (event) => {
@@ -21,11 +22,15 @@ function TimeOffForm({ onCancel }) {
   };
 
   const handleFromDateChange = (event) => {
+    setShowWarning2(false);
+    setShowWarning3(false);
+    setShowWarning4(false);
+
     const selectedDate = new Date(event.target.value);
     const toSelectDate = new Date(toDate);
     if (selectedDate !== toSelectDate) {
       if (toSelectDate && selectedDate > toSelectDate) {
-        setShowWarning3(true);
+        setShowWarning4(true);
       } else {
         setShowWarning2(false);
         setShowWarning3(false);
@@ -37,6 +42,10 @@ function TimeOffForm({ onCancel }) {
   };
 
   const handleToDateChange = (event) => {
+    setShowWarning2(false);
+    setShowWarning3(false);
+    setShowWarning4(false);
+
     const selectedDate = new Date(event.target.value);
     const today = new Date();
     const yesterday = new Date(today);
@@ -117,6 +126,11 @@ function TimeOffForm({ onCancel }) {
       {showWarning3 && (
         <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
           Selecciona una fecha posterior al día de inicio.
+        </Typography>
+      )}
+      {showWarning4 && (
+        <Typography variant="body1" align="center" color="error" style={{ fontSize: "18px", marginBottom: "25px" }}>
+          Selecciona una fecha anterior al día de finalización.
         </Typography>
       )}
       <form onSubmit={handleSubmit}>
