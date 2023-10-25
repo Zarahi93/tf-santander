@@ -9,7 +9,7 @@ import {
   Container,
   IconButton,
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close'; // Importa el ícono de cierre
+import CloseIcon from '@mui/icons-material/Close';
 
 
 
