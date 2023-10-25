@@ -17,10 +17,10 @@ const Home = () => {
 
     return (
         <div>
-      <Stack spacing={2} direction="row">
-      <Button variant="contained" onClick={goLogin}>Login</Button>
-      <Button variant="outlined" onClick={handleClick}>Time off</Button>
-    </Stack>
+            <Stack spacing={2} direction="row">
+                <Button variant="contained" onClick={goLogin}>Login</Button>
+                <Button variant="outlined" onClick={handleClick}>Time off</Button>
+            </Stack>
         </div>
     );
 }
