@@ -13,7 +13,7 @@ function Repository() {
             <Typography >
             {'TalentFest Latam 2023 - Squad Santander '}
             </Typography>
-            <Link variant="body2" color="text.secondary" href="https://github.com/Zarahi93/tf-santander">
+            <Link variant="body2" color="text.secondary" href="https://github.com/KarlaMacedo/TalentFestMex">
             Consulta el Repositorio
             </Link>
         </Box>   
