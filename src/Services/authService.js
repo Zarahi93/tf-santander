@@ -49,7 +49,7 @@ export const getPersonalInfo = async () => {
       }
     });
     const data = await res.json();
-    localStorage.setItem('userData', JSON.stringify(data))
+    return data
   } catch (error) {
     console.log(error);
   }
@@ -82,7 +82,7 @@ export const getLaborData = async () => {
         return res.json();
       })
       .then(data => {
-        localStorage.setItem('laborData', JSON.stringify(data))
+        return data
       })
       .catch(error => {
         console.log('Error al cargar datos: ' + error);
