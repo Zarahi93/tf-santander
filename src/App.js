@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider, getContrastRatio } from '@mui/material/styl
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './Components/Login';
 import Home from './Components/Home';
+import Help from './Components/Help';
 import { Timeoff } from "./Components/Timeoff/Timeoff";
 
 const redSantanderBase = '#ec0000';
@@ -81,6 +82,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/timeoff" element={<Timeoff />} />
+            <Route path="/help" element={<Help />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

@@ -4,6 +4,10 @@ import Feedback from '../Components/Home/Feedback'
 import Content from "../Components/Home/Content";
 import { Button, Stack, Box, Typography, Grid } from '@mui/material';
 import { getPersonalInfo, getLaborData } from "../Services/authService";
+import CourseBalance from './Home/CourseBalance';
+import Benefits from './Home/Benefits';
+import Header from "./Header"
+import Footer from "./Footer"
 
 const date = new Date().toLocaleDateString('es-ES', { weekday:"long", year:"numeric", month:"long", day:"numeric"});
 const firstLetter = date.charAt(0);
@@ -25,33 +29,35 @@ export default function Home() {
     }
 
     return (
-        <Box sx={{ maxWidth: '90%', m: 'auto' }}>
-            
-            <Stack spacing={2} direction="row">
-                <Button variant="contained" onClick={goLogin}>Login</Button>
-                <Button variant="outlined" onClick={handleClick}>Time off</Button>
-            </Stack>
-            
-            
+    <div
+        style={{
+            height: '100vh',
+        }}
+    >
+        <Header />
+        <Box sx={{ maxWidth: '90%', m: 'auto', pb: 7}}>
             <Grid container columnSpacing={3} >
-                <Grid item xs={12} md={5}>
+                <Grid item xs={12} sm={6} md={5}>
                         <Box pb={3} pt={3}>
                             <Typography variant='h1'color='#ec0000'>¡Hola {name}!</Typography>
                             <Typography variant='p4'>{stack}</Typography>   
                         </Box>
                 </Grid>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={12} sm={6} md={7}>
                     <Typography pb={3} pt={3} align='right' >{`${dateToday}`}</Typography>
                 </Grid>
                 <Grid item xs={12} md={5}>
                     <Content />
-                    <Content />
+                    <CourseBalance />
+                    <Benefits />
                 </Grid>
                 <Grid item xs={12} md={7}>
-                    <Content />
+                    <Benefits />
                     <Feedback />
                 </Grid>
             </Grid>
         </Box>
+        <Footer />
+    </div>
     );
 }

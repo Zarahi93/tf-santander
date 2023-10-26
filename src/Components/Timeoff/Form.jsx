@@ -156,7 +156,7 @@ function TimeOffForm({ onCancel }) {
               <MenuItem value="muerteMaterna">Fallecimiento materno</MenuItem>
               <MenuItem value="maternidadAdd">Adicional por maternidad</MenuItem>
               <MenuItem value="guardería">Guardería</MenuItem>
-              <MenuItem value="personal">Asuntos personales</MenuItem>
+              <MenuItem value="personal">Asuntos personales (ausencias)</MenuItem>
               <MenuItem value="intervencionFam">Intervención conyuge, hijos o padres</MenuItem>
               <MenuItem value="muerteFam">Fallecimiento familiar directo</MenuItem>
             </TextField>
