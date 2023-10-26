@@ -108,6 +108,10 @@
   text-align: center;
 }
 
+.rbc-toolbar button {
+  margin: 2px;
+}
+
 .red {
   background-color: #ec000e !important;
   border-radius: 1rem;
@@ -115,8 +119,20 @@
   font-family: "Santander Headline W05 Bold" !important;
 }
 
-.rbc-toolbar button {
-  margin: 2px;
+.green-holiday {
+  background-color: #c3cf12 !important;
+}
+
+.yellow-special {
+  background-color: #fcc707 !important;
+}
+
+.blue-absence {
+  background-color: #33b7c6 !important;
+}
+
+.pink {
+  background-color: #c2296c !important;
 }
 
 @media screen and (min-width: 360px) and (orientation: portrait) {
