@@ -64,7 +64,7 @@
 .rbc-button-link {
   font-size: 1rem;
   font-family: "Santander Text W05 Regular";
-
+  background-color: white;
 }
 
 .react-calendar {
@@ -95,6 +95,8 @@
 .react-calendar__tile {
   flex: 0;
   margin: .3rem 0;
+  background-color: white;
+
 }
 
 .react-calendar__tile abbr {
@@ -107,13 +109,20 @@
 }
 
 .red {
-  background-color: red !important;
+  background-color: #ec000e !important;
   border-radius: 1rem;
   color: white;
   font-family: "Santander Headline W05 Bold" !important;
 }
 
+.rbc-toolbar button {
+  margin: 2px;
+}
+
 @media screen and (min-width: 360px) and (orientation: portrait) {
+  .react-calendar__navigation__label__labelText {
+    font-size: 1rem;
+  }
   .rbc-calendar {
     width: 100%;
   }
@@ -139,8 +148,7 @@
 
   .rbc-button-link {
     font-size: .8rem;
-    background-color: white;
-  }
+    }
 
   .react-calendar__tile {
     background-color: white;
@@ -150,5 +158,11 @@
 @media screen and (min-width: 768px) and (orientation: portrait) {
   .rbc-calendar {
     width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .rbc-toolbar span button {
+    margin: 2px;
   }
 }
