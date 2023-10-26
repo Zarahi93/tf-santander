@@ -11,7 +11,7 @@ export const Help = () => {
       <Container maxWidth="lg"
         style={{
           backgroundColor: 'white',
-          padding: '20px',
+          padding: '20px 20px 58px 20px',
           marginTop: '10px'
         }}>
         <Grid container spacing={3}>
