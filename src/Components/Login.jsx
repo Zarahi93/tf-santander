@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Grid } from '@mui/material';
 
-import { getPersonalInfo, handleLogin } from '../Services/authService';
+import { getPersonalInfo, getLaborData, handleLogin } from '../Services/authService';
 
 // const getData = () => {
 //   return new Promise((resolve, reject) => {
@@ -47,8 +47,12 @@ export default function Login() {
       handleLogin(data.get("email"), data.get("password"))
       try {
         console.log(localStorage.getItem('user-uid'));
-        const data = await getPersonalInfo();
-        localStorage.setItem('userData', JSON.stringify(data))
+        await getPersonalInfo();
+        
+
+        await getLaborData()
+        
+
         console.log(JSON.parse(localStorage.getItem('userData')));
         navigate("/home");
       } catch (error) {

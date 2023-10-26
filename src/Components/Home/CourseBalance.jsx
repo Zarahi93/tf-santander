@@ -13,6 +13,8 @@ const getCoursesData = async () => {
   localStorage.setItem('coursesData', JSON.stringify(coursesData))
 };
 
+getCoursesData()
+
 const courses = JSON.parse(localStorage.getItem('coursesData'))
     // llamar courseRecors y hacer el set 
     // localStorage.setItem('courseData', JSON.stringify(data));
