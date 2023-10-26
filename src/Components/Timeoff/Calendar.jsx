@@ -10,12 +10,6 @@ import { useState } from "react";
 
 import 'moment/locale/es';
 moment.locale("es");
-// moment.updateLocale("es", {
-// 	week: {
-// 		dow: 1,
-// 		doy: 4,
-// 	},
-// });
 
 const localizer = momentLocalizer(moment);
 // const nationalFestivities = [
