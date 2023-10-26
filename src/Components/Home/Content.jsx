@@ -1,21 +1,22 @@
 import { Table, TableBody, TableCell, TableContainer, TableRow, Paper, Typography,tableCellClasses } from '@mui/material';
 import { getPersonalInfo, getLaborData } from '../../Services/authService';
 
-
+const personalInfo= getPersonalInfo();
+const laboralData = getLaborData();
 
 function createData(topic, data) {
     return { topic, data };
   }
   
   const rows = [
-    createData('Nombre', getPersonalInfo().full_name),
+    createData('Nombre', personalInfo.full_name),
     createData('ID de empleado', '0194877672'),
-    createData('Email', getPersonalInfo().email),
-    createData('Cumpleaños', getPersonalInfo().birthday),
-    createData('Posición', getLaborData().job_title),
-    createData('Nivel de Gestión', getLaborData().department),
+    createData('Email', personalInfo.email),
+    createData('Cumpleaños', personalInfo.birthday),
+    createData('Posición', laboralData.job_title),
+    createData('Nivel de Gestión', laboralData.department),
     createData('Tiempo en posición', '1 año, 5 meses, 5 días'),
-    createData('Tipo de jornada', getLaborData().work_shift),
+    createData('Tipo de jornada', laboralData.work_shift),
   ];
 
 

@@ -1,12 +1,9 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import { useNavigate } from "react-router-dom";
-import CssBaseline from '@mui/material/CssBaseline';
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Grid } from '@mui/material';
-import { handleLogin } from "../Services/authService";
 
 
 
@@ -25,11 +22,6 @@ function Repository() {
 // console.log(handleLogin('alejandro_lo@santander.com.mx','alejandro123'))
 export default function Login() {
     const navigate = useNavigate();
-
-    // const handleClick = () => {
-    //     navigate("/home");
-    // }
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -47,17 +39,7 @@ export default function Login() {
     };
 
     return (
-        <>
-            {/* <div>
-                <Stack spacing={2} direction="row">
-                    <Button variant="contained">Login</Button>
-                    <Button variant="outlined" onClick={handleClick}>Home</Button>
-                </Stack>
-            </div> */}
-
-
             <Grid container component="main" sx={{ height: '100vh' }}>
-            {/* <CssBaseline /> */}
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <Box
                 sx={{
@@ -86,6 +68,7 @@ export default function Login() {
                             autoComplete="email"
                             autoFocus
                             color='redSantander'
+                            type='email'
                         />
                         <TextField
                             margin="normal"
@@ -126,6 +109,5 @@ export default function Login() {
                 }}
             />
             </Grid>
-        </>
     );
 }
