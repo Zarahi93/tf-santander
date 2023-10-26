@@ -6,6 +6,7 @@ import {
   Typography,
   Menu,
   MenuItem,
+  Box
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,48 +28,50 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "white", padding: "15px" }}>
-      <Toolbar>
-        <img
-          src={logo}
-          alt="Logo de la empresa"
-          style={{ maxWidth: '25vh' }}
-        />
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        </Typography>
-        <IconButton
-          color="inherit"
-          edge="end"
-          aria-label="menu"
-          onClick={openMenu}
-          sx={{ color: 'red' }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          anchorEl={menuAnchorEl}
-          open={Boolean(menuAnchorEl)}
-          onClose={closeMenu}
-        >
-          <MenuItem onClick={closeMenu}>
-            <HomeIcon sx={{ marginRight: 1, color: "red" }} />
-            <Link to="/home" style={{ color:"black", textDecoration:"none" }}>Home</Link>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <AirplanemodeActiveIcon sx={{ marginRight: 1, color: "red" }} />
-            <Link to="/timeoff" style={{ color:"black", textDecoration:"none" }}>Time Off</Link>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <HelpOutlineIcon sx={{ marginRight: 1, color: "red" }} />
-            <Link to="/help" style={{ color:"black", textDecoration:"none" }}>Ayuda</Link>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <LogoutOutlinedIcon sx={{ marginRight: 1, color: "red" }} />
-            <Link to="/" style={{ color:"black", textDecoration:"none" }}>Cerrar Sesión</Link>
-          </MenuItem>
-        </Menu>
-      </Toolbar>
-    </AppBar>
+    <Box boxShadow={0}>
+      <AppBar position="static" style={{ backgroundColor: "white", padding: "15px" }}>
+        <Toolbar>
+          <img
+            src={logo}
+            alt="Logo de la empresa"
+            style={{ maxWidth: '25vh' }}
+          />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          </Typography>
+          <IconButton
+            color="inherit"
+            edge="end"
+            aria-label="menu"
+            onClick={openMenu}
+            sx={{ color: 'red' }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            anchorEl={menuAnchorEl}
+            open={Boolean(menuAnchorEl)}
+            onClose={closeMenu}
+          >
+            <MenuItem onClick={closeMenu}>
+              <HomeIcon sx={{ marginRight: 1, color: "red" }} />
+              <Link to="/home" style={{ color: "black", textDecoration: "none" }}>Home</Link>
+            </MenuItem>
+            <MenuItem onClick={closeMenu}>
+              <AirplanemodeActiveIcon sx={{ marginRight: 1, color: "red" }} />
+              <Link to="/timeoff" style={{ color: "black", textDecoration: "none" }}>Time Off</Link>
+            </MenuItem>
+            <MenuItem onClick={closeMenu}>
+              <HelpOutlineIcon sx={{ marginRight: 1, color: "red" }} />
+              <Link to="/help" style={{ color: "black", textDecoration: "none" }}>Ayuda</Link>
+            </MenuItem>
+            <MenuItem onClick={closeMenu}>
+              <LogoutOutlinedIcon sx={{ marginRight: 1, color: "red" }} />
+              <Link to="/" style={{ color: "black", textDecoration: "none" }}>Cerrar Sesión</Link>
+            </MenuItem>
+          </Menu>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
 
