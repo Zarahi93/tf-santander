@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Grid } from '@mui/material';
 
-import { getPersonalInfo, handleLogin } from '../Services/authService';
+import { getPersonalInfo, handleLogin, getLaborData, getCourseRecords } from '../Services/authService';
 
 // const getData = () => {
 //   return new Promise((resolve, reject) => {
@@ -44,12 +44,18 @@ export default function Login() {
       password: data.get('password'),
     });
     if (handleSubmit) {
-      handleLogin(data.get("email"), data.get("password"))
+      await handleLogin(data.get("email"), data.get("password"))
       try {
         console.log(localStorage.getItem('user-uid'));
         const data = await getPersonalInfo();
         localStorage.setItem('userData', JSON.stringify(data))
         console.log(JSON.parse(localStorage.getItem('userData')));
+        const laborData = await getLaborData();
+        localStorage.setItem('laborData', JSON.stringify(laborData))
+        console.log(JSON.parse(localStorage.getItem('laborData')));
+        const coursesData = await getCourseRecords();
+        localStorage.setItem('coursesData', JSON.stringify(coursesData))
+        console.log(JSON.parse(localStorage.getItem('coursesData')));
         navigate("/home");
       } catch (error) {
         console.log(error);
