@@ -51,22 +51,22 @@ export default function Login() {
       setLoading(true)
       await handleLogin(data.get("email"), data.get("password"))
       try {
-        console.log(localStorage.getItem('user-uid'));
+
         const data = await getPersonalInfo();
         localStorage.setItem('userData', JSON.stringify(data))
-        console.log(JSON.parse(localStorage.getItem('userData')));
+
         const laborData = await getLaborData();
         localStorage.setItem('laborData', JSON.stringify(laborData))
-        console.log(JSON.parse(localStorage.getItem('laborData')));
+
         const coursesData = await getCourseRecords();
         localStorage.setItem('coursesData', JSON.stringify(coursesData))
-        console.log(JSON.parse(localStorage.getItem('coursesData')));
+
         const salaryData = await getSalaryCompensation();
         localStorage.setItem('salaryData', JSON.stringify(salaryData))
-        console.log(JSON.parse(localStorage.getItem('salaryData')));
+
         const timeOffData = await getTimeOff();
         localStorage.setItem('timeOffData', JSON.stringify(timeOffData))
-        console.log(JSON.parse(localStorage.getItem('timeOffData')));
+
         setLoading(false);
         navigate("/home");
       } catch (error) {
