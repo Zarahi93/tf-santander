@@ -76,7 +76,7 @@ export default function Home() {
             <Typography pb={3} pt={3} align='right' >{`${dateToday}`}</Typography>
           </Grid>
           <Grid item xs={12} md={5}>
-            {/* <Content /> */}
+            <Content />
             <CourseBalance />
             <Benefits />
           </Grid>

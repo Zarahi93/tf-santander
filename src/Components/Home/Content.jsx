@@ -1,10 +1,12 @@
 import { Table, TableBody, TableCell, TableContainer, TableRow, Paper, Typography,tableCellClasses } from '@mui/material';
-import { getPersonalInfo, getLaborData } from '../../Services/authService';
+//import { getPersonalInfo, getLaborData } from '../../Services/authService';
 
 // const personalInfo= JSON.parse(localStorage.getItem('userData'));
 // const laboralData = JSON.parse(localStorage.getItem('laborData'));
-const personalInfo= getPersonalInfo()
-const laboralData= getLaborData()
+const personalInfo= JSON.parse(localStorage.getItem('userData'));
+// getPersonalInfo()
+const laboralData= JSON.parse(localStorage.getItem('laborData'));
+//getLaborData()
 
 
 function createData(topic, data) {
