@@ -1,8 +1,11 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import Dialog from '@mui/material/Dialog';
+import CircularProgress from '@mui/material/CircularProgress';
 import { Typography, TextField, Button, Grid } from '@mui/material';
 
 import { getPersonalInfo, handleLogin, getLaborData, getCourseRecords, getTimeOff, getSalaryCompensation } from '../Services/authService';
@@ -35,6 +38,7 @@ function Repository() {
 }
 // console.log(handleLogin('alejandro_lo@santander.com.mx','alejandro123'))
 export default function Login() {
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -44,6 +48,7 @@ export default function Login() {
       password: data.get('password'),
     });
     if (handleSubmit) {
+      setLoading(true)
       await handleLogin(data.get("email"), data.get("password"))
       try {
         console.log(localStorage.getItem('user-uid'));
@@ -62,6 +67,7 @@ export default function Login() {
         const timeOffData = await getTimeOff();
         localStorage.setItem('timeOffData', JSON.stringify(timeOffData))
         console.log(JSON.parse(localStorage.getItem('timeOffData')));
+        setLoading(false);
         navigate("/home");
       } catch (error) {
         console.log(error);
@@ -83,6 +89,11 @@ export default function Login() {
             alignItems: 'center',
           }}
         >
+            <Dialog open={loading}>
+
+            <CircularProgress />
+           </Dialog>
+
           <img src="../../logo-login.png" alt="logo" style={{ width: '80%' }} />
           <Typography component="h1" variant="h0" sx={{ mt: 10 }}>
             ¡Hola de nuevo!
