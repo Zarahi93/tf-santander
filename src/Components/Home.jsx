@@ -77,7 +77,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} md={5}>
             {/* <Content /> */}
-            {/* <CourseBalance /> */}
+            <CourseBalance />
             <Benefits />
           </Grid>
           <Grid item xs={12} md={7}>

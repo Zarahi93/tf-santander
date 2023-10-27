@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Grid } from '@mui/material';
 
-import { getPersonalInfo, handleLogin, getLaborData, getCourseRecords } from '../Services/authService';
+import { getPersonalInfo, handleLogin, getLaborData, getCourseRecords, getTimeOff, getSalaryCompensation } from '../Services/authService';
 
 // const getData = () => {
 //   return new Promise((resolve, reject) => {
@@ -56,6 +56,12 @@ export default function Login() {
         const coursesData = await getCourseRecords();
         localStorage.setItem('coursesData', JSON.stringify(coursesData))
         console.log(JSON.parse(localStorage.getItem('coursesData')));
+        const salaryData = await getSalaryCompensation();
+        localStorage.setItem('salaryData', JSON.stringify(salaryData))
+        console.log(JSON.parse(localStorage.getItem('salaryData')));
+        const timeOffData = await getTimeOff();
+        localStorage.setItem('timeOffData', JSON.stringify(timeOffData))
+        console.log(JSON.parse(localStorage.getItem('timeOffData')));
         navigate("/home");
       } catch (error) {
         console.log(error);
